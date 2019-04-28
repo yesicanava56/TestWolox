@@ -1,0 +1,8 @@
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Data\bin\Debug\netcoreapp2.1\Test.Wolox.Data.deps.json
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Data\bin\Debug\netcoreapp2.1\Test.Wolox.Data.dll
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Data\bin\Debug\netcoreapp2.1\Test.Wolox.Data.pdb
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Data\obj\Debug\netcoreapp2.1\Test.Wolox.Data.csproj.CoreCompileInputs.cache
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Data\obj\Debug\netcoreapp2.1\Test.Wolox.Data.AssemblyInfoInputs.cache
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Data\obj\Debug\netcoreapp2.1\Test.Wolox.Data.AssemblyInfo.cs
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Data\obj\Debug\netcoreapp2.1\Test.Wolox.Data.dll
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Data\obj\Debug\netcoreapp2.1\Test.Wolox.Data.pdb

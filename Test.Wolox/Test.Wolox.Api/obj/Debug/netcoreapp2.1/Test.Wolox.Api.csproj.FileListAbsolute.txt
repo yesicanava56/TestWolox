@@ -1,0 +1,14 @@
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Api\bin\Debug\netcoreapp2.1\Test.Wolox.Api.deps.json
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Api\bin\Debug\netcoreapp2.1\Test.Wolox.Api.runtimeconfig.json
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Api\bin\Debug\netcoreapp2.1\Test.Wolox.Api.runtimeconfig.dev.json
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Api\bin\Debug\netcoreapp2.1\Test.Wolox.Api.dll
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Api\bin\Debug\netcoreapp2.1\Test.Wolox.Api.pdb
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Api\obj\Debug\netcoreapp2.1\Test.Wolox.Api.csprojAssemblyReference.cache
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Api\obj\Debug\netcoreapp2.1\Test.Wolox.Api.csproj.CoreCompileInputs.cache
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Api\obj\Debug\netcoreapp2.1\Test.Wolox.Api.RazorAssemblyInfo.cache
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Api\obj\Debug\netcoreapp2.1\Test.Wolox.Api.RazorAssemblyInfo.cs
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Api\obj\Debug\netcoreapp2.1\Test.Wolox.Api.AssemblyInfoInputs.cache
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Api\obj\Debug\netcoreapp2.1\Test.Wolox.Api.AssemblyInfo.cs
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Api\obj\Debug\netcoreapp2.1\Test.Wolox.Api.RazorTargetAssemblyInfo.cache
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Api\obj\Debug\netcoreapp2.1\Test.Wolox.Api.dll
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Api\obj\Debug\netcoreapp2.1\Test.Wolox.Api.pdb
