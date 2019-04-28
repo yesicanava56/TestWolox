@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Test.Wolox.Domain\Test.Wolox.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

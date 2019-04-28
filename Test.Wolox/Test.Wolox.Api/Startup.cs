@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Test.Wolox.Api.DependencyInjection;
+using Test.Wolox.Api.Formatter;
 
 namespace Test.Wolox.Api
 {
@@ -25,7 +27,11 @@ namespace Test.Wolox.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc(option =>
+            {
+                option.InputFormatters.Insert(0, new CustomInputFormatter());
+            });
+            RegisterServices(services, Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,13 +41,30 @@ namespace Test.Wolox.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseHsts();
-            }
 
-            app.UseHttpsRedirection();
-            app.UseMvc();
+            //app.UseMvc();
+
+            app.UseAuthentication();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
+
+            //app.UseSwagger();
+            //app.UseSwaggerUI(option =>
+            //{
+            //    //option.SwaggerEndpoint("/docs/orders/v1/swagger.json", "Core API");
+            //    option.SwaggerEndpoint("v1/swagger.json", "Core API");
+            //});
+        }
+
+        private static void RegisterServices(IServiceCollection services, IConfiguration configuration)
+        {
+            // Adding dependencies from another layers (isolated from Presentation)
+            NativeInjectorBootStrapper.RegisterServices(services, configuration);
         }
     }
 }

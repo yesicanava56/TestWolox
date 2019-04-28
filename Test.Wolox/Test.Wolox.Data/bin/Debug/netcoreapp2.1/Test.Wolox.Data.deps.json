@@ -7,8 +7,25 @@
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "Test.Wolox.Data/1.0.0": {
+        "dependencies": {
+          "Test.Wolox.Models": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.1.1.0"
+        },
         "runtime": {
           "Test.Wolox.Data.dll": {}
+        }
+      },
+      "Test.Wolox.Models/1.0.0": {
+        "runtime": {
+          "Test.Wolox.Models.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/2.1.1.0": {
+        "runtime": {
+          "Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
+          }
         }
       }
     }
@@ -16,6 +33,16 @@
   "libraries": {
     "Test.Wolox.Data/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Test.Wolox.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/2.1.1.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

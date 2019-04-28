@@ -207,6 +207,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "Test.Wolox.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Test.Wolox.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Test.Wolox.Models.dll": {}
+        }
       }
     }
   },
@@ -680,11 +690,17 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Test.Wolox.Models/1.0.0": {
+      "type": "project",
+      "path": "../Test.Wolox.Models/Test.Wolox.Models.csproj",
+      "msbuildProject": "../Test.Wolox.Models/Test.Wolox.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "Test.Wolox.Models >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -717,7 +733,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\yesica.nava\\Documents\\Archivos Yesica\\TestWoloxApi\\Test.Wolox\\Test.Wolox.Models\\Test.Wolox.Models.csproj": {
+              "projectPath": "C:\\Users\\yesica.nava\\Documents\\Archivos Yesica\\TestWoloxApi\\Test.Wolox\\Test.Wolox.Models\\Test.Wolox.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
