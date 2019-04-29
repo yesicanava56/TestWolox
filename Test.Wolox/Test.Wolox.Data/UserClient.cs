@@ -8,7 +8,7 @@ using Test.Wolox.Models;
 
 namespace Test.Wolox.Data
 {
-    public class UserClient: IUserClient
+    public class UserClient : IUserClient
     {
         private readonly IConfiguration Configuration;
         public async Task<Response> GetUsers()
@@ -27,7 +27,69 @@ namespace Test.Wolox.Data
             }
             catch (Exception ex)
             {
-                Console.Write($"Module:Product, Class:Seller.cs, Method:GetSeller, Error: {ex}");
+                Console.Write($"Module:TestWolox, Class:UserClient.cs, Method:GetUsers, Error: {ex}");
+            }
+            return Response;
+        }
+        public async Task<Response> GetPhotos()
+        {
+            Response Response = new Response();
+            try
+            {
+                var request = WebRequest.Create("https://jsonplaceholder.typicode.com/photos");
+                request.Method = "GET";
+                request.ContentType = "application/json; charset=utf-8";
+                request.Timeout = 3000000;
+                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+                {
+                    return BuildResponse(response);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Write($"Module:TestWolox, Class:UserClient.cs, Method:GetPhotos, Error: {ex}");
+            }
+            return Response;
+        }
+        public async Task<Response> GetAlbumsList(string id)
+        {
+            Response Response = new Response();
+            try
+            {
+                string url = id != null ? "https://jsonplaceholder.typicode.com/albums?userId=" + id  : "https://jsonplaceholder.typicode.com/albums";
+                var request = WebRequest.Create(url);
+                request.Method = "GET";
+                request.ContentType = "application/json; charset=utf-8";
+                request.Timeout = 3000000;
+                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+                {
+                    return BuildResponse(response);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Write($"Module:TestWolox, Class:UserClient.cs, Method:GetPhotos, Error: {ex}");
+            }
+            return Response;
+        }
+
+        public async Task<Response> GetPhotosByAlbum(string url)
+        {
+            Response Response = new Response();
+            try
+            {
+                var request = WebRequest.Create(url);
+                request.Method = "GET";
+                request.ContentType = "application/json; charset=utf-8";
+                request.Timeout = 3000000;
+                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+                {
+                    return BuildResponse(response);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Write($"Module:TestWolox, Class:UserClient.cs, Method:GetPhotos, Error: {ex}");
             }
             return Response;
         }

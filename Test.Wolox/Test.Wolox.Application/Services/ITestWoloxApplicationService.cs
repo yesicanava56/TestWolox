@@ -8,5 +8,8 @@ namespace Test.Wolox.Application.Services
     public interface ITestWoloxApplicationService
     {
         ResponseViewModel GetUsersList();
+        ResponseViewModel GetPhotosUsersList();
+        ResponseViewModel GetAlbumsList( string id);
+        ResponseViewModel GetPhotosAlbumsByIdUser(string id);
     }
 }

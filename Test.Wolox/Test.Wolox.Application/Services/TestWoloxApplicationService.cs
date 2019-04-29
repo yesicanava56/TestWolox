@@ -23,5 +23,29 @@ namespace Test.Wolox.Application.Services
                 Data = TestWoloxDomainService.GetUsersList()
             };
         }
+        public ResponseViewModel GetPhotosUsersList()
+        {
+            return new ResponseViewModel()
+            {
+                Message = "Operación realizada con éxito.",
+                Data = TestWoloxDomainService.GetPhotosUsersList()
+            };
+        }
+        public ResponseViewModel GetAlbumsList(string id)
+        {
+            return new ResponseViewModel()
+            {
+                Message = "Operación realizada con éxito.",
+                Data = TestWoloxDomainService.GetAlbumsList(id)
+            };
+        }
+        public ResponseViewModel GetPhotosAlbumsByIdUser(string idUser)
+        {
+            return new ResponseViewModel()
+            {
+                Message = "Operación realizada con éxito.",
+                Data = TestWoloxDomainService.GetPhotosAlbumsByIdUser(idUser)
+            };
+        }
     }
 }

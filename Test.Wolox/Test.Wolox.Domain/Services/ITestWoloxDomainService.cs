@@ -9,5 +9,8 @@ namespace Test.Wolox.Domain.Services
     public interface ITestWoloxDomainService
     {
         List<User> GetUsersList();
+        List<Photos> GetPhotosUsersList();
+        List<albums> GetAlbumsList(string id);
+        List<albumsPhothos> GetPhotosAlbumsByIdUser(string idUser);
     }
 }
