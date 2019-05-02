@@ -47,5 +47,13 @@ namespace Test.Wolox.Application.Services
                 Data = TestWoloxDomainService.GetPhotosAlbumsByIdUser(idUser)
             };
         }
+        public ResponseViewModel GetPermission(string idUser, string idalbum)
+        {
+            return new ResponseViewModel()
+            {
+                Message = "Operación realizada con éxito.",
+                Data = TestWoloxDomainService.GetPermission(idUser, idalbum)
+            };
+        }
     }
 }

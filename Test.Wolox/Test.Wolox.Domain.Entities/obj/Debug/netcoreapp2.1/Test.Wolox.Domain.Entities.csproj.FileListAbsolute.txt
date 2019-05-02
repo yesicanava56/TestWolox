@@ -6,3 +6,4 @@ C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolo
 C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Domain.Entities\obj\Debug\netcoreapp2.1\Test.Wolox.Domain.Entities.AssemblyInfo.cs
 C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Domain.Entities\obj\Debug\netcoreapp2.1\Test.Wolox.Domain.Entities.dll
 C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Domain.Entities\obj\Debug\netcoreapp2.1\Test.Wolox.Domain.Entities.pdb
+C:\Users\yesica.nava\Documents\Archivos Yesica\TestWoloxApi\Test.Wolox\Test.Wolox.Domain.Entities\obj\Debug\netcoreapp2.1\Test.Wolox.Domain.Entities.csprojAssemblyReference.cache

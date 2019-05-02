@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "3d650778e3500094e38cb51398f5ded5c197beae"
+    "signature": "851def8bc6378296d859b7f2dd82fcad2f9d720b"
   },
   "compilationOptions": {
     "defines": [
@@ -35,6 +35,31 @@
         },
         "compile": {
           "Test.Wolox.Api.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.3.101.4": {
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.101.4"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {}
+        }
+      },
+      "AWSSDK.DynamoDBv2/3.3.101.3": {
+        "dependencies": {
+          "AWSSDK.Core": "3.3.101.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.DynamoDBv2.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.101.3"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AWSSDK.DynamoDBv2.dll": {}
         }
       },
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
@@ -528,6 +553,9 @@
       },
       "Test.Wolox.Data/1.0.0": {
         "dependencies": {
+          "AWSSDK.Core": "3.3.101.4",
+          "AWSSDK.DynamoDBv2": "3.3.101.3",
+          "Test.Wolox.Domain.Entities": "1.0.0",
           "Test.Wolox.Models": "1.0.0"
         },
         "runtime": {
@@ -3513,6 +3541,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AWSSDK.Core/3.3.101.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2O+bzB6KiT4VB9Zamonr5HAXZA/o0UFPeHZLHE5tHnAzZSSmkTIp3Kc2FtyazK9ArNWdFHpWFIEboKK3WhaECA==",
+      "path": "awssdk.core/3.3.101.4",
+      "hashPath": "awssdk.core.3.3.101.4.nupkg.sha512"
+    },
+    "AWSSDK.DynamoDBv2/3.3.101.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UzaIvMp6lmg7g/NoJHuQEabBc5OlU7apmf9J4pBAuVHPqSSYeDv9crNiD8iK2EPueuxeHuQAiVX/EoPaTPNVBA==",
+      "path": "awssdk.dynamodbv2/3.3.101.3",
+      "hashPath": "awssdk.dynamodbv2.3.3.101.3.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
       "type": "package",

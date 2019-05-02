@@ -1,18 +1,45 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "signature": "419d03231cf89c216f6cadd81720652e57a16689"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "Test.Wolox.Data/1.0.0": {
         "dependencies": {
+          "AWSSDK.Core": "3.3.101.4",
+          "AWSSDK.DynamoDBv2": "3.3.101.3",
+          "Test.Wolox.Domain.Entities": "1.0.0",
           "Test.Wolox.Models": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "2.1.1.0"
         },
         "runtime": {
           "Test.Wolox.Data.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.3.101.4": {
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.101.4"
+          }
+        }
+      },
+      "AWSSDK.DynamoDBv2/3.3.101.3": {
+        "dependencies": {
+          "AWSSDK.Core": "3.3.101.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.DynamoDBv2.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.101.3"
+          }
+        }
+      },
+      "Test.Wolox.Domain.Entities/1.0.0": {
+        "runtime": {
+          "Test.Wolox.Domain.Entities.dll": {}
         }
       },
       "Test.Wolox.Models/1.0.0": {
@@ -32,6 +59,25 @@
   },
   "libraries": {
     "Test.Wolox.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AWSSDK.Core/3.3.101.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2O+bzB6KiT4VB9Zamonr5HAXZA/o0UFPeHZLHE5tHnAzZSSmkTIp3Kc2FtyazK9ArNWdFHpWFIEboKK3WhaECA==",
+      "path": "awssdk.core/3.3.101.4",
+      "hashPath": "awssdk.core.3.3.101.4.nupkg.sha512"
+    },
+    "AWSSDK.DynamoDBv2/3.3.101.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UzaIvMp6lmg7g/NoJHuQEabBc5OlU7apmf9J4pBAuVHPqSSYeDv9crNiD8iK2EPueuxeHuQAiVX/EoPaTPNVBA==",
+      "path": "awssdk.dynamodbv2/3.3.101.3",
+      "hashPath": "awssdk.dynamodbv2.3.3.101.3.nupkg.sha512"
+    },
+    "Test.Wolox.Domain.Entities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -11,5 +11,6 @@ namespace Test.Wolox.Application.Services
         ResponseViewModel GetPhotosUsersList();
         ResponseViewModel GetAlbumsList( string id);
         ResponseViewModel GetPhotosAlbumsByIdUser(string id);
+        ResponseViewModel GetPermission(string idUser, string idalbum);
     }
 }

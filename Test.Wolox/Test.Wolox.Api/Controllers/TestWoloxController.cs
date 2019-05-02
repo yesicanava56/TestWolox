@@ -38,7 +38,7 @@ namespace Test.Wolox.Api.Controllers
             }
             catch (Exception ex)
             {
-                Console.Write($"Module:TestWolox, Class:TestWoloxController.cs, Method:GetUsersList,Error: {ex}");
+                Console.Write($"Module:TestWolox, Class:TestWoloxController.cs, Method:GetPhotosUsersList,Error: {ex}");
                 return StatusCode(400);
             }
         }
@@ -52,7 +52,7 @@ namespace Test.Wolox.Api.Controllers
             }
             catch (Exception ex)
             {
-                Console.Write($"Module:TestWolox, Class:TestWoloxController.cs, Method:GetUsersList,Error: {ex}");
+                Console.Write($"Module:TestWolox, Class:TestWoloxController.cs, Method:getalbumslist,Error: {ex}");
                 return StatusCode(400);
             }
         }
@@ -66,7 +66,20 @@ namespace Test.Wolox.Api.Controllers
             }
             catch (Exception ex)
             {
-                Console.Write($"Module:TestWolox, Class:TestWoloxController.cs, Method:GetUsersList,Error: {ex}");
+                Console.Write($"Module:TestWolox, Class:TestWoloxController.cs, Method:GetPhotosAlbumsByIdUser,Error: {ex}");
+                return StatusCode(400);
+            }
+        }
+        [HttpGet("/api/testwolox/getpermission/{iduser}/{idalbum}", Name = "getpermission")]
+        public IActionResult GetPermission(string iduser, string idalbum)
+        {
+            try
+            {
+                return Ok(WoloxApplication.GetPermission(iduser, idalbum));
+            }
+            catch (Exception ex)
+            {
+                Console.Write($"Module:TestWolox, Class:TestWoloxController.cs, Method:GetPermission,Error: {ex}");
                 return StatusCode(400);
             }
         }

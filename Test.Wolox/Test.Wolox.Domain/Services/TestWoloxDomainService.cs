@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Test.Wolox.Data;
+using Test.Wolox.Data.Repository;
 using Test.Wolox.Domain.Entities;
 using Test.Wolox.Models;
 
@@ -13,9 +14,13 @@ namespace Test.Wolox.Domain.Services
     public class TestWoloxDomainService : ITestWoloxDomainService
     {
         private readonly IUserClient UserClient;
-        public TestWoloxDomainService(IUserClient userClient)
+        private readonly IUserRepository UserRepository;
+        private readonly IPermitsRepository PermitsRepository;
+        public TestWoloxDomainService(IUserClient userClient, IUserRepository userRepository, IPermitsRepository permitsRepository)
         {
             UserClient = userClient;
+            UserRepository = userRepository;
+            PermitsRepository = permitsRepository;
         }
         public List<User> GetUsersList()
         {
@@ -39,6 +44,20 @@ namespace Test.Wolox.Domain.Services
             }
 
             return response;
+        }
+        public List<User> GetUsersListDynamo()
+        {
+            List<User> response = new List<User>();
+            Enumerators.QueryScanOperator Operator = 0;
+            List<User> productsExistent = UserRepository.GetUser("prueba", Operator);
+            return productsExistent;
+        }
+
+        public List<Permits> GetPermission(string idUser, string idalbum)
+        {
+            Enumerators.QueryScanOperator Operator = 0;
+            List<Permits> productsExistent = PermitsRepository.GetPermission(idUser, idalbum, Operator);
+            return productsExistent;
         }
         public List<Photos> GetPhotosUsersList()
         {
