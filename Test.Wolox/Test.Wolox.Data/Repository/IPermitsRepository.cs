@@ -8,6 +8,9 @@ namespace Test.Wolox.Data.Repository
 {
     public interface IPermitsRepository
     {
-        List<Permits> GetPermission(string valueAtribute1, string valueAtribute2, Enumerators.QueryScanOperator valueOperator);
+        List<Permission> GetPermission(string valueAtribute1, string valueAtribute2, Enumerators.QueryScanOperator valueOperator);
+        bool RegisterPermission(Permission permits);
+        bool UpdatePermission(Permission permits);
+        List<Permission> GetPermissionUser(string valueAtribute, Enumerators.QueryScanOperator valueOperator);
     }
 }

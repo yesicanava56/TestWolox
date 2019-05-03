@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Test.Wolox.Domain.Entities;
 using Test.Wolox.Domain.Services;
 using Test.Wolox.Models;
 
@@ -55,5 +56,41 @@ namespace Test.Wolox.Application.Services
                 Data = TestWoloxDomainService.GetPermission(idUser, idalbum)
             };
         }
+        public ResponseViewModel GetPermissionUser(string idalbum)
+        {
+            return new ResponseViewModel()
+            {
+                Message = "Operación realizada con éxito.",
+                Data = TestWoloxDomainService.GetPermissionUser(idalbum)
+            };
+        }
+        
+
+        public ResponseViewModel RegisterPermission(Permission Permission)
+        {
+            return new ResponseViewModel()
+            {
+                Message = "Operación realizada con éxito.",
+                Data = TestWoloxDomainService.RegisterPermission(Permission)
+            };
+        }
+        public ResponseViewModel UpdatePermission(Permission Permission)
+        {
+            return new ResponseViewModel()
+            {
+                Message = "Operación realizada con éxito.",
+                Data = TestWoloxDomainService.UpdatePermission(Permission)
+            };
+        }
+        public ResponseViewModel GetCommentsByIdUserName(string name, string userId)
+        {
+            return new ResponseViewModel()
+            {
+                Message = "Operación realizada con éxito.",
+                Data = TestWoloxDomainService.GetCommentsByIdUserName(name, userId)
+            };
+        }
+        
+
     }
 }

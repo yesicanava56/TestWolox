@@ -12,5 +12,7 @@ namespace Test.Wolox.Data
         Task<Response> GetPhotos();
         Task<Response> GetAlbumsList(string id);
         Task<Response> GetPhotosByAlbum(string id);
+        Task<Response> GetCommentsByIdUserName(string name, string userId);
+        Task<Response> GetComment(string url);
     }
 }

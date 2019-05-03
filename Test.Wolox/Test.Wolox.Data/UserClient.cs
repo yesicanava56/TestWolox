@@ -11,12 +11,15 @@ namespace Test.Wolox.Data
     public class UserClient : IUserClient
     {
         private readonly IConfiguration Configuration;
+        public UserClient(IConfiguration configuration) {
+            Configuration = configuration;
+        }
         public async Task<Response> GetUsers()
         {
             Response Response = new Response();
             try
             {
-                var request = WebRequest.Create("https://jsonplaceholder.typicode.com/users");
+                var request = WebRequest.Create(Configuration["Users"]);
                 request.Method = "GET";
                 request.ContentType = "application/json; charset=utf-8";
                 request.Timeout = 3000000;
@@ -36,7 +39,7 @@ namespace Test.Wolox.Data
             Response Response = new Response();
             try
             {
-                var request = WebRequest.Create("https://jsonplaceholder.typicode.com/photos");
+                var request = WebRequest.Create(Configuration["Photos"]);
                 request.Method = "GET";
                 request.ContentType = "application/json; charset=utf-8";
                 request.Timeout = 3000000;
@@ -56,7 +59,7 @@ namespace Test.Wolox.Data
             Response Response = new Response();
             try
             {
-                string url = id != null ? "https://jsonplaceholder.typicode.com/albums?userId=" + id  : "https://jsonplaceholder.typicode.com/albums";
+                string url = id != null ? Configuration["albums"] + "/albums?userId=" + id  : Configuration["albums"];
                 var request = WebRequest.Create(url);
                 request.Method = "GET";
                 request.ContentType = "application/json; charset=utf-8";
@@ -73,7 +76,50 @@ namespace Test.Wolox.Data
             return Response;
         }
 
+        public async Task<Response> GetCommentsByIdUserName(string name, string userId)
+        {
+            Response Response = new Response();
+            try
+            {
+                string url = userId != null ? Configuration["Post"] + "?userId=" + userId : Configuration["Post"];
+                var request = WebRequest.Create(url);
+                request.Method = "GET";
+                request.ContentType = "application/json; charset=utf-8";
+                request.Timeout = 3000000;
+                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+                {
+                    return BuildResponse(response);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Write($"Module:TestWolox, Class:UserClient.cs, Method:GetCommentsByIdUserName, Error: {ex}");
+            }
+            return Response;
+        }
+
         public async Task<Response> GetPhotosByAlbum(string url)
+        {
+            Response Response = new Response();
+            try
+            {
+                var request = WebRequest.Create(url);
+                request.Method = "GET";
+                request.ContentType = "application/json; charset=utf-8";
+                request.Timeout = 3000000;
+                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+                {
+                    return BuildResponse(response);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Write($"Module:TestWolox, Class:UserClient.cs, Method:GetPhotos, Error: {ex}");
+            }
+            return Response;
+        }
+
+        public async Task<Response> GetComment(string url)
         {
             Response Response = new Response();
             try

@@ -13,6 +13,10 @@ namespace Test.Wolox.Domain.Services
         List<albums> GetAlbumsList(string id);
         List<albumsPhothos> GetPhotosAlbumsByIdUser(string idUser);
         List<User> GetUsersListDynamo();
-        List<Permits> GetPermission(string idUser, string idalbum);
+        List<Permission> GetPermission(string idUser, string idalbum);
+        bool RegisterPermission(Permission permits);
+        bool UpdatePermission(Permission permits);
+        List<Permission> GetPermissionUser(string idalbum);
+        List<PostComments> GetCommentsByIdUserName(string name, string userId);
     }
 }
